@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>满冠体育 · 体育知识参考</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f7f5f0;
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            color: #2e2c2a;
+            line-height: 1.7;
+            padding: 0 1.25rem;
+        }
+
+        .wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2.5rem 0 4rem 0;
+        }
+
+        /* hero 区 */
+        .hero {
+            text-align: left;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #d8d2c6;
+            padding-bottom: 2.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.8rem;
+            color: #3b3531;
+        }
+
+        .hero .subhead {
+            font-size: 1.1rem;
+            color: #6b625b;
+            line-height: 1.6;
+            max-width: 70%;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .subhead {
+                max-width: 100%;
+                font-size: 1rem;
+            }
+        }
+
+        /* 文章卡片 / 区域 */
+        section {
+            margin-bottom: 2.8rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #3f3935;
+            border-left: 4px solid #b8a99a;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-top: 0.8rem;
+        }
+
+        .info-item {
+            background: #ffffffec;
+            padding: 1.5rem 1.2rem;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid #e3ddd3;
+        }
+
+        .info-item h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #4f463f;
+        }
+
+        .info-item p {
+            font-size: 0.98rem;
+            margin-bottom: 0.3rem;
+            color: #4f4a45;
+        }
+
+        @media (max-width: 640px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        /* 引用块 / 提示框 */
+        .highlight-box {
+            background: #efeae2;
+            padding: 1.5rem 1.8rem;
+            border-radius: 4px;
+            border-left: 6px solid #b19f8b;
+            margin: 1.8rem 0;
+            font-style: normal;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-box .attribution {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: #6e645b;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            background: #ffffffec;
+            border: 1px solid #dbd4c9;
+            padding: 1.6rem 1.8rem;
+            border-radius: 4px;
+        }
+
+        .faq-summary details {
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed #d5cdc0;
+            padding-bottom: 0.8rem;
+        }
+
+        .faq-summary details:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-summary summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #3f3935;
+            font-size: 1.05rem;
+            padding: 0.2rem 0;
+        }
+
+        .faq-summary summary::marker {
+            color: #9b8b7a;
+        }
+
+        .faq-summary details p {
+            margin: 0.6rem 0 0.2rem 0;
+            font-size: 0.98rem;
+            color: #4d4742;
+            padding-left: 0.6rem;
+        }
+
+        /* 底部链接 */
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #d8d2c6;
+            font-size: 1rem;
+            color: #5d5650;
+            text-align: left;
+        }
+
+        .footer-note a {
+            color: #5f4e40;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-color: #b8a99a;
+            font-weight: 400;
+        }
+
+        .footer-note a:hover {
+            color: #3a2f28;
+            text-decoration-color: #3a2f28;
+        }
+
+        .small-meta {
+            font-size: 0.85rem;
+            color: #8a7f75;
+            margin-top: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>满冠体育 · 查证·对照·延伸</h1>
+        <div class="subhead">
+            日常检索体育术语、赛事背景与训练常识时，一个可靠的对照来源能节省大量时间。
+            <a href="https://chinese-manguansport.com">满冠体育</a> 正是围绕这种需求整理的知识型站点。
+        </div>
+    </div>
+
+    <!-- 优势区：检索与对照场景 -->
+    <section>
+        <h2 class="section-title">日常查询与对照</h2>
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>赛事数据对照</h3>
+                <p>涉及赛季时间、历史纪录、积分规则等细节，常需多来源相互印证。<br>站点提供条目式整理，便于快速比对。</p>
+            </div>
+            <div class="info-item">
+                <h3>术语与规则延伸</h3>
+                <p>从基础判定到专项技术解释，内容偏向客观说明。<br>适合赛前准备、教学参考或背景阅读。</p>
+            </div>
+            <div class="info-item">
+                <h3>训练与恢复提示</h3>
+                <p>常见运动损伤预防、拉伸流程、营养建议等以知识卡片方式呈现。<br>内容简洁，侧重可操作性。</p>
+            </div>
+            <div class="info-item">
+                <h3>历史与趋势概览</h3>
+                <p>不局限于单纯数据，还包含项目发展脉络、主要赛事沿革。<br>延伸阅读时可作为起点。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区：为什么需要这种参考 -->
+    <section>
+        <h2 class="section-title">参考资料的价值：日常使用场景</h2>
+        <p>不论是体育爱好者、业余教练还是学生，在查证某个动作标准、某条赛事规则或某位运动员的履历时，信息源不一致是常见困扰。一个结构清晰、引用克制的平台能充当中间校验层。</p>
+        <p><a href="https://chinese-manguansport.com">满冠体育</a> 的页面内容并非唯一权威，但胜在简明、分类合理，适合作为延伸阅读的跳板。例如，当你想了解「羽毛球发球高度演变」或「游泳转身规则细节」时，可以先对照站内摘要，再根据参考文献深入。</p>
+
+        <div class="highlight-box">
+            <p>📘 使用建议：将站点当作对照手册——在查阅官方规则或教材前，先浏览概括性条目，带着问题去深读效果更好。</p>
+            <p class="attribution">—— 来自阅读者的日常记录</p>
+        </div>
+
+        <p>另外，移动端访问友好，条目之间留有足够间距，适合在训练间隙、观赛过程中快速翻阅。不追求大而全，但求每一条都有据可查。</p>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2 class="section-title">常见查询方向（FAQ 摘要）</h2>
+        <div class="faq-summary">
+            <details>
+                <summary>如何快速找到某运动项目的现行规则？</summary>
+                <p>站点将项目规则按大项分类，并在每个条目下注明参考年份或版本。建议先确认该运动是否在分类列表中，再点进对应页面核对要点。</p>
+            </details>
+            <details>
+                <summary>术语解释与专业教材一致吗？</summary>
+                <p>尽量采用通用定义，并标注来源（如国际协会、教材或赛事手册）。但遇到有争议或更新的定义，页面会标明“当前参考版本”，请以官方最新文件为准。</p>
+            </details>
+            <details>
+                <summary>是否有训练动作的步骤拆解？</summary>
+                <p>部分页面包含基础动作的文字描述和注意事项，但无视频或图解。适合作为理论参照，实际训练仍需专业指导。</p>
+            </details>
+            <details>
+                <summary>内容更新频率如何？</summary>
+                <p>不定期根据赛事规则变动或用户反馈进行调整。重要更新会在页面顶部标注日期。对于时效要求高的信息（如奥运资格赛），建议同时查阅官方渠道。</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- 底部链接 + 自然句子 -->
+    <div class="footer-note">
+        <p>如果你想从更系统的角度了解体育知识框架，不妨把 <a href="https://chinese-manguansport.com">满冠体育</a> 加入你的对照清单。查询时多一份参照，往往能更快定位到可靠信息。</p>
+        <p class="small-meta">本页面仅作信息索引与阅读参考，不构成专业建议。各条目内容请以权威机构发布为准。</p>
+    </div>
+
+</div>
+</body>
+</html>
